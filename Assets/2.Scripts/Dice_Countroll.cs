@@ -13,7 +13,10 @@ public class Dice_Countroll : MonoBehaviour
     {
         if (delay_time <= 0)
         {
+            Debug.Log("주사위 완료");
             Dice_Shoot();
+            dice1.GetComponent<Dice_Number>().Start_count();
+            dice2.GetComponent<Dice_Number>().Start_count();
             delay_time = delay_time_num;
         }
 
@@ -33,7 +36,5 @@ public class Dice_Countroll : MonoBehaviour
     public void Update()
     {
         delay_time-= Time.deltaTime;
-        if (delay_time <= 0)
-            Debug.Log("주사위 완료");
     }
 }
