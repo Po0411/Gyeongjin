@@ -470,6 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dice1: {fileID: 1674882202}
   dice2: {fileID: 2062793025}
+  delay_time_num: 5
 --- !u!1 &117068031
 GameObject:
   m_ObjectHideFlags: 0
