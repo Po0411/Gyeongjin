@@ -25,19 +25,35 @@ public class BackendManager : MonoBehaviour
         }
     }
 
-    public void Join_button()
+    public void Member_button() // 회원가입 함수
     {
         Debug.Log(inputField_ID.text);
         Debug.Log(inputField_PW.text);
 
-        Test();
+        Member();
+    }
+
+    public void Login_button() // 로그인 함수
+    {
+        Debug.Log(inputField_ID.text);
+        Debug.Log(inputField_PW.text);
+
+        Login();
     }
 
     // 동기 함수를 비동기에서 호출하게 해주는 함수(유니티 UI 접근 불가)
-    async void Test()
+    async void Member()
     {
         await Task.Run(() => {
             BackendLogin.Instance.CustomSignUp(inputField_ID.text, inputField_PW.text); // [추가] 뒤끝 회원가입 함수
+            Debug.Log("테스트를 종료합니다.");
+        });
+    }
+
+    async void Login()
+    {
+        await Task.Run(() => {
+            BackendLogin.Instance.CustomLogin(inputField_ID.text, inputField_PW.text); // [추가] 뒤끝 회원가입 함수
             Debug.Log("테스트를 종료합니다.");
         });
     }
