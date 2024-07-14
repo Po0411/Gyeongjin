@@ -41,8 +41,7 @@ public class BackendManager : MonoBehaviour
         Login();
     }
 
-    // 동기 함수를 비동기에서 호출하게 해주는 함수(유니티 UI 접근 불가)
-    async void Member()
+    async void Member() // Member_button 실행 되면 회원가입을 받는다.
     {
         await Task.Run(() => {
             BackendLogin.Instance.CustomSignUp(inputField_ID.text, inputField_PW.text); // [추가] 뒤끝 회원가입 함수
@@ -50,7 +49,7 @@ public class BackendManager : MonoBehaviour
         });
     }
 
-    async void Login()
+    async void Login() // Login_button 실행 되면 아이디와 비번이 맞으면 로그인이 됩니다.
     {
         await Task.Run(() => {
             BackendLogin.Instance.CustomLogin(inputField_ID.text, inputField_PW.text); // [추가] 뒤끝 회원가입 함수
