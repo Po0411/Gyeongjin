@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/1.Scenes/1.\uD551\uD06C/Tunisia.unity"
-    guid: c71d87a13c6d7b34aa5be248338794a5
+    path: "Assets/1.Scenes/\uD558\uB791\uC774_\uC2E4\uD5D8_\uC52C/hoewon_gaib.unity"
+    guid: a423fae2178dd1b45bcb28d173be813e
+  - enabled: 1
+    path: "Assets/1.Scenes/\uD558\uB791\uC774_\uC2E4\uD5D8_\uC52C/log_in.unity"
+    guid: 127cc2c3968d12042b0339861f3dea35
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7d24a1ccca6f07c4bbde595f1b05c19b, type: 2}
