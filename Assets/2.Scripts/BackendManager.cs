@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Threading.Tasks;
 using BackEnd;
 using TMPro;
 using UnityEngine.UI;
@@ -30,7 +29,7 @@ public class BackendManager : MonoBehaviour
         Debug.Log(inputField_ID.text);
         Debug.Log(inputField_PW.text);
 
-        Member();
+        StartCoroutine(Member());
     }
 
     public void Login_button() // 로그인 함수
@@ -38,22 +37,16 @@ public class BackendManager : MonoBehaviour
         Debug.Log(inputField_ID.text);
         Debug.Log(inputField_PW.text);
 
-        Login();
+        StartCoroutine(Login());
     }
 
-    async void Member() // Member_button 실행 되면 회원가입을 받는다.
+    IEnumerator Member() // Member_button 실행 되면 회원가입을 받는다.
     {
-        await Task.Run(() => {
-            BackendLogin.Instance.CustomSignUp(inputField_ID.text, inputField_PW.text); // [추가] 뒤끝 회원가입 함수
-            Debug.Log("테스트를 종료합니다.");
-        });
+        yield return StartCoroutine(BackendLogin.Instance.CustomSignUp(inputField_ID.text, inputField_PW.text));
     }
 
-    async void Login() // Login_button 실행 되면 아이디와 비번이 맞으면 로그인이 됩니다.
+    IEnumerator Login() // Login_button 실행 되면 아이디와 비번이 맞으면 로그인이 됩니다.
     {
-        await Task.Run(() => {
-            BackendLogin.Instance.CustomLogin(inputField_ID.text, inputField_PW.text); // [추가] 뒤끝 회원가입 함수
-            Debug.Log("테스트를 종료합니다.");
-        });
+        yield return StartCoroutine(BackendLogin.Instance.CustomLogin(inputField_ID.text, inputField_PW.text));
     }
 }

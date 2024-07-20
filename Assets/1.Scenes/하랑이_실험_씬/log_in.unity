@@ -1518,7 +1518,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: "\uC544\uC774\uB514 \uC0DD\uC131"
+  m_Text: "\uC544\uC774\uB514 \uC785\uB825"
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -1653,6 +1653,7 @@ GameObject:
   - component: {fileID: 1668288481}
   - component: {fileID: 1668288480}
   - component: {fileID: 1668288479}
+  - component: {fileID: 1668288483}
   m_Layer: 5
   m_Name: "\uB85C\uADF8\uC778"
   m_TagString: Untagged
@@ -1789,6 +1790,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668288477}
   m_CullTransparentMesh: 1
+--- !u!114 &1668288483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668288477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a6dfcc33763ec4cb93c2a6926440ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: Game_UI
 --- !u!1 &1677519253
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,7 +2292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC544\uC774\uB514 \uC0DD\uC131\u200B"
+  m_text: "\uC544\uC774\uB514 \uC785\uB825\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2da6ac7805fcec941924da0c74b8d5bf, type: 2}
   m_sharedMaterial: {fileID: -9057254820108929695, guid: 2da6ac7805fcec941924da0c74b8d5bf, type: 2}
@@ -2433,7 +2447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC544\uC774\uB514 \uC0DD\uC131\u200B..."
+  m_text: "\uC544\uC774\uB514 \uC785\uB825..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2da6ac7805fcec941924da0c74b8d5bf, type: 2}
   m_sharedMaterial: {fileID: -9057254820108929695, guid: 2da6ac7805fcec941924da0c74b8d5bf, type: 2}
